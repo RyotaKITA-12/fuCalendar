@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/RyotaKITA-12/Fu-calendar.git/config"
+	"github.com/RyotaKITA-12/fuCalendar.git/config"
 	"github.com/google/uuid"
 	"github.com/lib/pq"
 )

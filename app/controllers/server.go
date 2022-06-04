@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/RyotaKITA-12/Fu-calendar.git/app/models"
-	"github.com/RyotaKITA-12/Fu-calendar.git/config"
+	"github.com/RyotaKITA-12/fuCalendar.git/app/models"
+	"github.com/RyotaKITA-12/fuCalendar.git/config"
 )
 
 func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {

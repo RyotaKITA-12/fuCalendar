@@ -1,4 +1,4 @@
-module github.com/RyotaKITA-12/Fu-calendar.git
+module github.com/RyotaKITA-12/fuCalendar.git
 
 go 1.18
 

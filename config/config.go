@@ -3,7 +3,7 @@ package config
 import (
 	"log"
 
-	"github.com/RyotaKITA-12/Fu-calendar.git/utils"
+	"github.com/RyotaKITA-12/fuCalendar.git/utils"
 	"gopkg.in/go-ini/ini.v1"
 )
 

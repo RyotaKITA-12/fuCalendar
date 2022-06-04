@@ -3,13 +3,13 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 {{ range .Events }}
 <div class="test">
-    <div>{{ .Content }}~</div>
+    <div>{{ .Content }}~{{ .Content }}</div>
 </div>
 {{end}}
 <h1 class="text-primary"><b>誘われ待ちふれんず。</b></h1>
-{{ range .Groups }}
-<div class="test">
-    <div>{{ .Content }}~</div>
-</div>
-{{end}}
+<!-- {{ range .Groups }}                                                 -->
+<!-- <div class="test">                                                  -->
+<!--     <div>{{ .Content }}~</div>                                      -->
+<!-- </div>                                                              -->
+<!-- {{end}}                                                             -->
 {{end}}

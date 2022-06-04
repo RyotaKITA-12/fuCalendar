@@ -24,7 +24,8 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			Name:     r.PostFormValue("name"),
 			Email:    r.PostFormValue("email"),
 			Password: r.PostFormValue("password"),
-		} if err := user.CreateUser(); err != nil {
+		}
+        if err := user.CreateUser(); err != nil {
 			log.Println(err)
 		}
 		http.Redirect(w, r, "/", 302)

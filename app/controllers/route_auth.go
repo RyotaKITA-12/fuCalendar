@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/RyotaKITA-12/fuCalendar.git/app/models"
+	"github.com/RyotaKITA-12/Fu-calendar.git/app/models"
 )
 
 func signup(w http.ResponseWriter, r *http.Request) {

@@ -1,0 +1,60 @@
+package main
+
+import (
+	"fmt"
+	// "log"
+
+	"github.com/RyotaKITA-12/goTodo.git/app/models"
+	// "github.com/RyotaKITA-12/goTodo.git/config"
+)
+
+func main() {
+    fmt.Println(models.Db)
+
+    // u := &models.User{}
+    // u.Name = "test"
+    // u.Email = "test@example.com"
+    // u.Password = "testtest"
+    // fmt.Println(u)
+    //
+    // u.CreateUser()
+
+    // u, _ := models.GetUser(1)
+    // fmt.Println(u)
+    //
+    // u.Name = "test2"
+    // u.Email = "test2@example.com"
+    // u.UpdateUser()
+    // u, _ = models.GetUser(1)
+    // fmt.Println(u)
+
+    // u.DeleteUser()
+    // u, _ = models.GetUser(1)
+    // fmt.Println(u)
+
+    // u, _ = models.GetUser(1)
+    // u.CreateTodo("first task")
+    // u.CreateTodo("second task")
+    // u.CreateTodo("third task")
+
+    // t, _ := models.GetTodo(1)
+    // fmt.Println(t)
+    //
+    // todos, _ := models.GetTodos()
+    // for _, v := range todos {
+    //     fmt.Println(v)
+    // }
+    //
+    // u.GetTodosByUser()
+
+    // t, _ := models.GetTodo(4)
+    // t.Content = "fourth task"
+    // t.UpdateTodo()
+    //
+    // t, _ = models.GetTodo(5)
+    // t.Content = "fifth task"
+    // t.UpdateTodo()
+
+    t, _ := models.GetTodo(5)
+    t.DeleteTodo()
+}

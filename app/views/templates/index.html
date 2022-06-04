@@ -3,7 +3,7 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 {{ range .Events }}
 <div class="test">
-    <div>{{ .Content }}~{{ .Content }}</div>
+    <div>{{ .StartTime }}~{{ .EndTime }} : {{ .Content }} </div>
 </div>
 {{end}}
 <h1 class="text-primary"><b>誘われ待ちふれんず。</b></h1>

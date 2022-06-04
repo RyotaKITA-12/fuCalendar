@@ -13,7 +13,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
         if err != nil {
             generateHTML(w, nil, "layout", "public_navbar", "signup")
         } else {
-            http.Redirect(w, r, "/events", 302)
+            http.Redirect(w, r, "/index", 302)
         }
 	} else if r.Method == "POST" {
 		err := r.ParseForm()
@@ -24,8 +24,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			Name:     r.PostFormValue("name"),
 			Email:    r.PostFormValue("email"),
 			Password: r.PostFormValue("password"),
-		}
-		if err := user.CreateUser(); err != nil {
+		} if err := user.CreateUser(); err != nil {
 			log.Println(err)
 		}
 		http.Redirect(w, r, "/", 302)
@@ -37,7 +36,7 @@ func login(w http.ResponseWriter, r *http.Request) {
     if err != nil {
         generateHTML(w, nil, "layout", "public_navbar", "login")
     } else {
-        http.Redirect(w, r, "/todos", 302)
+        http.Redirect(w, r, "/index", 302)
     }
 }
 

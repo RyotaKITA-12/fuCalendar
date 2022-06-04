@@ -26,7 +26,7 @@ create table groups (
   host_id    integer references users(id),
   gest_id    integer references users(id),
   created_at timestamp not null
-)
+);
 
 create table events (
   id         serial primary key,
@@ -37,5 +37,4 @@ create table events (
   host_id    integer references users(id),
   group_id   integer references groups(id),
   created_at timestamp not null
-)
-
+);

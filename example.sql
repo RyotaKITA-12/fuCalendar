@@ -1,7 +1,7 @@
 drop table sessions;
-drop table users;
-drop table groups;
 drop table events;
+drop table groups;
+drop table users;
 
 create table users (
   id         serial primary key,

@@ -3,6 +3,7 @@ package controllers
 import (
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/RyotaKITA-12/fuCalendar.git/app/models"
 )
@@ -31,16 +32,16 @@ func index(w http.ResponseWriter, r *http.Request) {
     }
 }
 
-func todoNew(w http.ResponseWriter, r *http.Request) {
+func eventNew(w http.ResponseWriter, r *http.Request) {
     _, err := session(w, r)
     if err != nil {
         http.Redirect(w, r, "/login", 302)
     } else {
-        generateHTML(w, nil, "layout", "private_navbar", "todo_new")
+        generateHTML(w, nil, "layout", "private_navbar", "event_new")
     }
 }
 
-func todoSave(w http.ResponseWriter, r *http.Request) {
+func eventSave(w http.ResponseWriter, r *http.Request) {
     sess, err := session(w, r)
     if err != nil {
         http.Redirect(w, r, "/login", 302)
@@ -54,11 +55,20 @@ func todoSave(w http.ResponseWriter, r *http.Request) {
             log.Println(err)
         }
         content := r.PostFormValue("content")
-        if err := user.CreateTodo(content); err != nil {
+        location := r.PostFormValue("location")
+        start_time := stringToTime(r.PostFormValue("start_time"))
+        end_time := stringToTime(r.PostFormValue("end_time"))
+        if err := user.CreateEvent(content, location, start_time, end_time); err != nil {
             log.Println(err)
         }
-        http.Redirect(w, r, "/todos", 302)
+        http.Redirect(w, r, "/events", 302)
     }
+}
+
+func stringToTime(str string) time.Time {
+    var layout = "2022-01-01 10:00:00"
+    t, _ := time.Parse(layout, str)
+    return t
 }
 
 func todoEdit(w http.ResponseWriter, r *http.Request, id int) {

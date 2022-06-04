@@ -1,5 +1,6 @@
 drop table sessions;
 drop table users;
+drop table todos;
 
 create table users (
   id         serial primary key,
@@ -18,3 +19,9 @@ create table sessions (
   created_at timestamp not null
 );
 
+create table todos (
+  id         serial primary key,
+  content    text,
+  user_id    integer references users(id),
+  created_at timestamp not null
+);

@@ -1,6 +1,6 @@
 drop table sessions;
 drop table users;
-drop table todos;
+drop table groups;
 drop table events;
 
 create table users (
@@ -20,27 +20,22 @@ create table sessions (
   created_at timestamp not null
 );
 
-create table todos (
+create table groups (
   id         serial primary key,
-  content    text,
-  user_id    integer references users(id),
+  name       text,
+  host_id    integer references users(id),
+  gest_id    integer references users(id),
   created_at timestamp not null
-);
+)
 
 create table events (
   id         serial primary key,
   content    text,
   location   text,
-  user_id    text,
   start_time timestamp not null,
   end_time   timestamp not null,
+  host_id    integer references users(id),
+  group_id   integer references groups(id),
   created_at timestamp not null
 )
 
-create table invitations(
-  id         serial primary key,
-  event_id   integer references events(id),
-  host_id    integer references users(id),
-  gest_id    integer references users(id),
-  created_at timestamp not null
-);

@@ -1,3 +1,5 @@
 2022/06/04 13:47:25 users.go:41: pq: SSL is not enabled on the server
 2022/06/04 13:51:36 users.go:41: pq: SSL is not enabled on the server
 2022/06/04 13:55:25 users.go:41: pq: SSL is not enabled on the server
+2022/06/04 14:05:34 users.go:41: pq: SSL is not enabled on the server
+2022/06/04 14:06:42 users.go:41: pq: relation "users" does not exist

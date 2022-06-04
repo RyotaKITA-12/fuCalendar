@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/RyotaKITA-12/goTodo.git/app/models"
+	"github.com/RyotaKITA-12/fuCalendar.git/app/models"
 )
 
 func top(w http.ResponseWriter, r *http.Request) {

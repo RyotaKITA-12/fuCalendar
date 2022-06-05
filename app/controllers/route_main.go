@@ -21,7 +21,7 @@ func index(w http.ResponseWriter, r *http.Request) {
         }
         // events, _ := user.GetEventsByUser()
         // user.Events = events
-        generateHTML(w, nil, "layout", "private_navbar", "index")
+        generateHTML(w, nil, "layout", "private_navbar", "search")
     }
 }
 

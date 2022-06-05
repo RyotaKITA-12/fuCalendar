@@ -58,14 +58,14 @@ func StartMainServer() error {
 	http.Handle("/static/", http.StripPrefix("/static/", files))
 
 	http.HandleFunc("/", signup)
-	http.HandleFunc("/signup", signup)
+    http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
     http.HandleFunc("/logout", logout)
     http.HandleFunc("/authenticate", authenticate)
     http.HandleFunc("/index", index)
     http.HandleFunc("/invitation", invitation)
     http.HandleFunc("/invitation/save", invitationSave)
-    // http.HandleFunc("/search", search)
+    http.HandleFunc("/search", search)
     // http.HandleFunc("/group", group)
 
     port := os.Getenv("PORT")

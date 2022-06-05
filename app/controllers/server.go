@@ -66,6 +66,8 @@ func StartMainServer() error {
     http.HandleFunc("/invitation", invitation)
     http.HandleFunc("/invitation/save", invitationSave)
     http.HandleFunc("/search", search)
+    http.HandleFunc("/search/time", searchTime)
+    http.HandleFunc("/search/friend", searchFriend)
     http.HandleFunc("/group", group)
 
     port := os.Getenv("PORT")

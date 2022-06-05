@@ -1,0 +1,49 @@
+{{define "content"}}
+<br>
+<h1 class="text-primary"><b>お友達を遊びに誘おう。</b></h1>
+<br>
+<form role="form" action="/invitation/save" method="post">
+    <b><div class="form-group">
+      <h2 class="text-primary">お友達のID
+         <input class="form-control"
+                name="content"
+                id="content"
+                placeholder="お友達のID"
+                size="30">
+         <button class="btn btn-lg btn-primary pull-right" type="submit">検索</button>
+      </h2>
+      <h2 class="text-primary">お友達のID
+         <input class="form-control"
+                name="content"
+                id="content"
+                placeholder="お友達のID"
+                size="30">
+         <button class="btn btn-lg btn-primary pull-right" type="submit">追加</button>
+    </h2>
+    </div>
+<div class="test">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            test_001
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            test_002
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            test_003
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            test_004
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            test_005
+        </a>
+    </div>
+</div>
+</form>
+{{end}}

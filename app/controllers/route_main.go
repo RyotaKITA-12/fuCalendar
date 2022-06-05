@@ -34,6 +34,24 @@ func search(w http.ResponseWriter, r *http.Request) {
     }
 }
 
+func searchTime(w http.ResponseWriter, r *http.Request) {
+    _, err := session(w, r)
+    if err != nil {
+        http.Redirect(w, r, "/login", 302)
+    } else {
+        generateHTML(w, nil, "layout", "private_navbar", "search_time")
+    }
+}
+
+func searchFriend(w http.ResponseWriter, r *http.Request) {
+    _, err := session(w, r)
+    if err != nil {
+        http.Redirect(w, r, "/login", 302)
+    } else {
+        generateHTML(w, nil, "layout", "private_navbar", "search_friend")
+    }
+}
+
 func group(w http.ResponseWriter, r *http.Request) {
     _, err := session(w, r)
     if err != nil {

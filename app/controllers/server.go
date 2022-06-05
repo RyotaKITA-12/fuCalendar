@@ -62,7 +62,7 @@ func StartMainServer() error {
 	http.HandleFunc("/login", login)
     http.HandleFunc("/logout", logout)
     http.HandleFunc("/authenticate", authenticate)
-    http.HandleFunc("/index", login)
+    http.HandleFunc("/index", index)
     http.HandleFunc("/invitation", invitation)
     http.HandleFunc("/invitation/save", invitationSave)
     // http.HandleFunc("/search", search)

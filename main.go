@@ -20,4 +20,4 @@ func main() {
     u.CreateEvent("test-content", "渋谷", time.Now(), time.Now().AddDate(0, 0, 1), 1)
 	controllers.StartMainServer()
     // e, _ := u.GetEventsByUser()
-
+}

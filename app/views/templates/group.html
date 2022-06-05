@@ -1,0 +1,39 @@
+{{define "content"}}
+<br>
+<h1 class="text-primary"><b>暇な日を登録しよう。</b></h1>
+<form role="form" action="/invitation/save" method="post">
+    <b><div class="form-group">
+      <h2 class="text-primary">グループ名
+         <input class="form-control"
+                name="content"
+                id="content"
+                placeholder="グループ名"
+                size="30">
+         <button class="btn btn-lg btn-primary pull-right" type="submit">決定</button>
+      </h2>
+      <h2 class="text-primary">お友達のID
+         <input class="form-control"
+                name="content"
+                id="content"
+                placeholder="お友達のID"
+                size="30">
+         <button class="btn btn-lg btn-primary pull-right" type="submit">追加</button>
+    </h2>
+    </div>
+<div class="test">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">test_001
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button></a>
+        <a href="#" class="list-group-item list-group-item-action">test_002
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button></a>
+        <a href="#" class="list-group-item list-group-item-action">test_003
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button></a>
+        <a href="#" class="list-group-item list-group-item-action">test_004
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button></a>
+        <a href="#" class="list-group-item list-group-item-action">test_005
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button></a>
+    </div>
+</div>
+</form>
+{{end}}
+

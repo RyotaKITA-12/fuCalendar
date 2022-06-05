@@ -29,7 +29,7 @@ func (u *User) CreateEvent(content string,
                 host_id,
                 group_id,
                 created_at)
-            VALUES ($1, $2, $3, $4, $5, $6)`
+            VALUES ($1, $2, $3, $4, $5, $6, &7)`
     _, err = Db.Exec(cmd, content, location, start_time, end_time,
                      u.ID, group_id, time.Now())
     if err != nil {
@@ -88,7 +88,7 @@ func (u *User) GetEventsByUser() (events []Event, err error) {
     cmd := `SELECT id, content, location, start_time, end_time,
                    host_id, group_id, created_at
             FROM events
-            WHERE user_id = $1`
+            WHERE host_id = $1`
     rows, err := Db.Query(cmd, u.ID)
     if err != nil {
         log.Fatalln(err)

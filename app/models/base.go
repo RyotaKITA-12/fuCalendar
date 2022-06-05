@@ -16,12 +16,6 @@ var Db *sql.DB
 
 var err error
 
-// const (
-// 	tableNameUser    = "users"
-//     tableNameTodo    = "todos"
-//     tableNameSession = "sessions"
-// )
-
 func init() {
     url := os.Getenv("DATABASE_URL")
     connection, _ := pq.ParseURL(url)

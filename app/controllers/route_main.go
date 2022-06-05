@@ -21,7 +21,7 @@ func index(w http.ResponseWriter, r *http.Request) {
         }
         // events, _ := user.GetEventsByUser()
         // user.Events = events
-        generateHTML(w, nil, "layout", "private_navbar", "search")
+        generateHTML(w, nil, "layout", "private_navbar", "index")
     }
 }
 
@@ -31,6 +31,15 @@ func search(w http.ResponseWriter, r *http.Request) {
         http.Redirect(w, r, "/login", 302)
     } else {
         generateHTML(w, nil, "layout", "private_navbar", "search")
+    }
+}
+
+func group(w http.ResponseWriter, r *http.Request) {
+    _, err := session(w, r)
+    if err != nil {
+        http.Redirect(w, r, "/login", 302)
+    } else {
+        generateHTML(w, nil, "layout", "private_navbar", "group")
     }
 }
 

@@ -8,3 +8,8 @@
   border: gray 3px solid;
   border-radius:20px;
 }
+
+.test > button {
+  display: block;
+  margin: 0 0 0 auto;
+}

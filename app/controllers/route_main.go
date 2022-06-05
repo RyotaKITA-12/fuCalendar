@@ -23,7 +23,7 @@ func index(w http.ResponseWriter, r *http.Request) {
     if err != nil {
         http.Redirect(w, r, "/", 302)
     } else {
-        user, err := sess.GetUserBySession()
+        _, err := sess.GetUserBySession()
         if err != nil {
             log.Println(err)
         }

@@ -1,0 +1,2 @@
+2022/06/05 09:46:45 users.go:42: pq: SSL is not enabled on the server
+2022/06/05 09:47:15 users.go:42: pq: duplicate key value violates unique constraint "users_email_key"

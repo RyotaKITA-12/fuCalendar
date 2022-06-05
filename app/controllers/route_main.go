@@ -38,7 +38,7 @@ func invitation(w http.ResponseWriter, r *http.Request) {
     if err != nil {
         http.Redirect(w, r, "/login", 302)
     } else {
-        generateHTML(w, user, "layout", "private_navbar", "index")
+        generateHTML(w, nil, "layout", "private_navbar", "index")
         // generateHTML(w, nil, "layout", "private_navbar", "invitation")
     }
 }

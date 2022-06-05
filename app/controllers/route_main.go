@@ -60,8 +60,8 @@ func invitationSave(w http.ResponseWriter, r *http.Request) {
         location := r.PostFormValue("location")
         start_time := stringToTime(r.PostFormValue("start_time"))
         end_time := stringToTime(r.PostFormValue("end_time"))
-        group_id, _ := strconv.Atoi(r.PostFormValue("group"))
-        if err := user.CreateEvent(content, location, start_time, end_time, group_id); err != nil {
+        // group_id, _ := strconv.Atoi(r.PostFormValue("group"))
+        if err := user.CreateEvent(content, location, start_time, end_time); err != nil {
             log.Println(err)
         }
         http.Redirect(w, r, "/invitation", 302)

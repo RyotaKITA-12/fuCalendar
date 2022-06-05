@@ -1,10 +1,15 @@
 {{ define "navbar" }}
-<div class="container">
-    <img src="/static/img/logo.png" alt="fu-calendar">
-    <a href="/index">トップ</a>
-    <a href="/search">探す</a>
-    <a href="/group">お友達</a>
-    <a href="/invitation">誘って</a>
-    <a href="/logout">ばいばい</a>
-</div>
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+      <ul class="navbar-nav">
+          <a href="#" class="navbar-brand"><img src="/static/img/logo.png" height="50" alt="fu-calendar"></a>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="/index" class="nav-link">トップ</a></li>
+        <li class="nav-item"><a href="/search" class="nav-link">探す</a></li>
+        <li class="nav-item"><a href="/group" class="nav-link">お友達</a></li>
+        <li class="nav-item"><a href="/invitation" class="nav-link">誘って</a></li>
+        <li class="nav-item"><a href="/logout" class="nav-link">ばいばい</a></li>
+      </ul>
+</nav>
+
 {{end}}

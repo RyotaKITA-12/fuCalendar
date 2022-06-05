@@ -35,6 +35,6 @@ create table events (
   start_time timestamp not null,
   end_time   timestamp not null,
   host_id    integer references users(id),
-  group_id   integer references groups(id),
+  -- group_id   integer references groups(id),
   created_at timestamp not null
 );

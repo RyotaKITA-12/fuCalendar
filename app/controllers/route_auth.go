@@ -28,7 +28,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
         if err := user.CreateUser(); err != nil {
 			log.Println(err)
 		}
-		http.Redirect(w, r, "/", 302)
+		http.Redirect(w, r, "/login", 302)
 	}
 }
 

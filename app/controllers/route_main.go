@@ -18,8 +18,8 @@ func index(w http.ResponseWriter, r *http.Request) {
         if err != nil {
             log.Println(err)
         }
-        events, _ := user.GetEventsByUser()
-        user.Events = events
+        // events, _ := user.GetEventsByUser()
+        // user.Events = events
         generateHTML(w, nil, "layout", "private_navbar", "index")
     }
 }

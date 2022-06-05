@@ -1,5 +1,5 @@
 .test {
-  width: 500px;
+  width: 450px;
   height: 350px;
   margin-left: auto;
   margin-right: auto;
@@ -7,10 +7,4 @@
   overflow: scroll;
   border: gray 3px solid;
   border-radius:20px;
-}
-
-.test > button {
-float:right
-  /* display: block; */
-  /* margin: 0 0 0 auto; */
 }

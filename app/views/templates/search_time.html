@@ -1,0 +1,42 @@
+{{define "content"}}
+<br>
+<h1 class="text-primary"><b>お友達を遊びに誘おう。</b></h1>
+<br>
+<form role="form" action="/invitation/save" method="post">
+    <b><div class="form-group">
+      <p><h2 class="text-primary">日時
+         <input type="datetime-local"
+                name="start-time"
+                min="2022-01-01T00:00"
+                max="2099-12-31T23:59"
+                required>
+         <button class="btn btn-lg btn-primary pull-right" type="submit">検索</button>
+      </h2>
+    </div>
+<div class="test">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-success pull-right" type="submit">誘う</button>
+            test_001
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-success pull-right" type="submit">誘う</button>
+            test_002
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-success pull-right" type="submit">誘う</button>
+            test_003
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-success pull-right" type="submit">誘う</button>
+            test_004
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-success pull-right" type="submit">誘う</button>
+            test_005
+        </a>
+    </div>
+</div>
+</form>
+{{end}}
+

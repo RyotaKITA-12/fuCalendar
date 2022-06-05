@@ -12,25 +12,26 @@ type Event struct {
     StartTime time.Time
     EndTime   time.Time
     HostID     int
-    // GroupID     int
+    GroupID     int
 	CreatedAt time.Time
 }
 
 func (u *User) CreateEvent(content string,
                            location string,
                            start_time time.Time,
-                           end_time time.Time) (err error) {
-                           // group_id int) (err error) {
+                           end_time time.Time,
+                           group_id int) (err error) {
     cmd := `INSERT INTO events (
                 content,
                 location,
                 start_time,
                 end_time,
                 host_id,
+                group_id,
                 created_at)
             VALUES ($1, $2, $3, $4, $5, $6)`
     _, err = Db.Exec(cmd, content, location, start_time, end_time,
-                     u.ID, time.Now())
+                     u.ID, group_id, time.Now())
     if err != nil {
         log.Fatalln(err)
     }
@@ -85,7 +86,7 @@ func (u *User) CreateEvent(content string,
 
 func (u *User) GetEventsByUser() (events []Event, err error) {
     cmd := `SELECT id, content, location, start_time, end_time,
-                   host_id, created_at
+                   host_id, group_id, created_at
             FROM events
             WHERE user_id = $1`
     rows, err := Db.Query(cmd, u.ID)
@@ -101,7 +102,7 @@ func (u *User) GetEventsByUser() (events []Event, err error) {
             &event.StartTime,
             &event.EndTime,
             &event.HostID,
-            // &event.GroupID,
+            &event.GroupID,
             &event.CreatedAt)
         if err != nil {
             log.Fatalln(err)

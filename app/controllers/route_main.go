@@ -15,7 +15,6 @@ func index(w http.ResponseWriter, r *http.Request) {
         http.Redirect(w, r, "/", 302)
     } else {
         _, err := sess.GetUserBySession()
-        // user, err := sess.GetUserBySession()
         if err != nil {
             log.Println(err)
         }

@@ -23,7 +23,7 @@ func index(w http.ResponseWriter, r *http.Request) {
         //     log.Println(err)
         // }
         user.Events = events
-        generateHTML(w, events, "layout", "private_navbar", "index")
+        generateHTML(w, user, "layout", "private_navbar", "index")
     }
 }
 

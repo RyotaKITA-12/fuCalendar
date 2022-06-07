@@ -3,11 +3,12 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 <div class="test">
     <div class="list-group">
-        <!-- <a href="#" class="list-group-item list-group-item-action">                           -->
-        <!--     <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button> -->
-        <!--     <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>    -->
-        <!--     　2022/06/10 20:00 ~ 2022/06/10 23:00                                            -->
-        <!-- </a>                                                                                  -->
+        {{ range .Events }}
+        <a href="#" class="list-group-item list-group-item-action">
+            <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
+            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+            　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}
+        </a>
         <!-- <a href="#" class="list-group-item list-group-item-action">                           -->
         <!--     <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button> -->
         <!--     <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>    -->
@@ -48,6 +49,7 @@
         <!--     <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>    -->
         <!--     　2022/06/18 20:00 ~ 2022/06/18 23:00                                            -->
         </a>
+    {{end}}
     </div>
 </div>
 <br>
@@ -77,9 +79,9 @@
     <!-- </li>                                                                                  -->
     </ul>
 </div>
-<!-- {{ range .Groups }}                                                 -->
+<!-- {{ range .Groups }} -->
 <!-- <div class="test">                                                  -->
 <!--     <div>{{ .Content }}~</div>                                      -->
 <!-- </div>                                                              -->
-<!-- {{end}}                                                             -->
+<!-- {{end}} -->
 {{end}}

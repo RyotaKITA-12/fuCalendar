@@ -20,18 +20,18 @@ func (u *User) CreateEvent(content string,
                            location string,
                            start_time time.Time,
                            end_time time.Time,
-                           group_id int) (err error) {
+                           g_id int) (err error) {
     cmd := `INSERT INTO events (
                 content,
                 location,
                 start_time,
                 end_time,
                 host_id,
-                group_id,
+                g_id,
                 created_at)
             VALUES ($1, $2, $3, $4, $5, $6, &7)`
     _, err = Db.Exec(cmd, content, location, start_time, end_time,
-                     u.ID, group_id, time.Now())
+                     u.ID, g_id, time.Now())
     if err != nil {
         log.Fatalln(err)
     }
@@ -86,7 +86,7 @@ func (u *User) CreateEvent(content string,
 
 func (u *User) GetEventsByUser() (events []Event, err error) {
     cmd := `SELECT id, content, location, start_time, end_time,
-                   host_id, group_id, created_at
+                   host_id, g_id, created_at
             FROM events
             WHERE host_id = $1`
     rows, err := Db.Query(cmd, u.ID)

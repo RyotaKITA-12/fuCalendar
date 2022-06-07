@@ -4,11 +4,11 @@
 <div class="test">
     <div class="list-group">
         {{ range .Events }}
-        <a href="#" class="list-group-item list-group-item-action">
-            <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
-            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
-            　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}
-        </a>
+        {{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}
+        <!-- <a href="#" class="list-group-item list-group-item-action"> <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button> -->
+        <!--     <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>                                                            -->
+        <!--     　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}                                                                                  -->
+        <!-- </a>                                                                                                                                          -->
         {{end}}
     </div>
 </div>

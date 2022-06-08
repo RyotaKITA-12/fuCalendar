@@ -4,7 +4,7 @@
 <div class="test">
     {{ range .Events }}
     <a href="#" class="list-group-item list-group-item-action">
-        <div>{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
+        <div style=display: inline-blockl>{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
         <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
         <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
     </a>

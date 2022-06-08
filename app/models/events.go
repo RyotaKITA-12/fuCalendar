@@ -18,7 +18,8 @@ type Event struct {
 	CreatedAt    time.Time
 }
 
-func (u *User) CreateEvent(content string,
+func (u *User) CreateEvent(
+    content string,
 	location string,
 	start_time time.Time,
 	end_time time.Time,

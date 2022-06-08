@@ -63,6 +63,24 @@ func group(w http.ResponseWriter, r *http.Request) {
     }
 }
 
+func groupSave(w http.ResponseWriter, r *http.Request) {
+    sess, err := session(w, r)
+    if err != nil {
+        http.Redirect(w, r, "/login", 302)
+    } else {
+        err = r.ParseForm()
+        if err != nil {
+            log.Println(err)
+        }
+        user, err := sess.GetUserBySession()
+        if err != nil {
+            log.Println(err)
+        }
+        // name := r.PostForm
+        generateHTML(w, user, "layout", "private_navbar", "group")
+    }
+}
+
 func invitation(w http.ResponseWriter, r *http.Request) {
     _, err := session(w, r)
     if err != nil {

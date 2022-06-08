@@ -25,5 +25,6 @@ func (u *User) CreateGroup(name string, gests []User) (err error) {
         if err != nil {
             log.Fatalln(err)
         }
+    }
 	return err
 }

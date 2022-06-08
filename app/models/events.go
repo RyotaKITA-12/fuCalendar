@@ -6,14 +6,16 @@ import (
 )
 
 type Event struct {
-	ID        int
-	Content   string
-	Location  string
-	StartTime time.Time
-	EndTime   time.Time
-	HostID    int
-	GroupID   int
-	CreatedAt time.Time
+	ID           int
+	Content      string
+	Location     string
+	StartTime    time.Time
+	EndTime      time.Time
+	StartTimeStr string
+	EndTimeStr   string
+	HostID       int
+	GroupID      int
+	CreatedAt    time.Time
 }
 
 func (u *User) CreateEvent(content string,
@@ -107,6 +109,8 @@ func (u *User) GetEventsByUser() (events []Event, err error) {
 		if err != nil {
 			log.Fatalln(err)
 		}
+        event.StartTimeStr = event.StartTime.Format("2022-01-01 15:00")
+        event.EndTimeStr = event.EndTime.Format("2022-01-01 15:00")
 		events = append(events, event)
 	}
 	rows.Close()

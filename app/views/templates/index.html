@@ -1,6 +1,7 @@
 {{define "content"}}
 <br>
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
+UserName:{{.Name}}
 {{ range .Events }}
 <div>　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}</div>
 <div class="test">

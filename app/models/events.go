@@ -109,8 +109,8 @@ func (u *User) GetEventsByUser() (events []Event, err error) {
 		if err != nil {
 			log.Fatalln(err)
 		}
-        event.StartTimeStr = event.StartTime.Format("2022-01-01 15:00")
-        event.EndTimeStr = event.EndTime.Format("2022-01-01 15:00")
+        event.StartTimeStr = event.StartTime.Format("2006-01-02 15:04")
+        event.EndTimeStr = event.EndTime.Format("2006-01-02 15:04")
 		events = append(events, event)
 	}
 	rows.Close()

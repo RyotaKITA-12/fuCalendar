@@ -1,8 +1,10 @@
 {{define "content"}}
 <br>
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
+{{ .Email }}
 <div class="test">
     <div class="list-group">
+        {{ .Events }}
         {{ range .Events }}
         {{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}
         <!-- <a href="#" class="list-group-item list-group-item-action"> <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button> -->

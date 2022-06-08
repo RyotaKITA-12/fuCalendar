@@ -1,16 +1,12 @@
 {{define "content"}}
 <br>
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
-UserName:{{.Name}}
-<!-- {{ range .Events }}                                                 -->
-<!-- <div>　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}</div> -->
 <div class="test">
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action"> <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
-            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
-            　2022
-        </a>
-    </div>
+    {{ range .Events }}
+    <a href="#" class="list-group-item list-group-item-action"> <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+        <div>　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}</div>
+    </a>
+    {{end}}
 </div>
-<!-- {{end}} -->
 {{end}}

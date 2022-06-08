@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	// "github.com/RyotaKITA-12/fuCalendar.git/app/models"
+	_ "github.com/RyotaKITA-12/fuCalendar.git/app/models"
 )
 
 func index(w http.ResponseWriter, r *http.Request) {

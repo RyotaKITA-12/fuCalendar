@@ -1,8 +1,10 @@
 {{define "content"}}
 <br>
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
-<!-- {{ .Events }}                                                       -->
-<!-- {{ range .Events }}                                                 -->
+{{ range .Events }}
+<div>{{ .Content }}</div>
+{{end}}
+{{end}}
 <!-- <div>　{{ .StartTime }} ~ {{ .EndTime }}　　{{ .Content }}</div> -->
 <!-- <div class="test">                                                                                                                                    -->
 <!--     <div class="list-group">                                                                                                                          -->
@@ -18,10 +20,3 @@
 <!--         {{end}}                                                                                                                                       -->
 <!--     </div>                                                                                                                                            -->
 <!-- </div>                                                                                                                                                -->
-<br>
-<h1 class="text-primary"><b>誘われ待ちふれんず。</b></h1>
-<div class="test">
-    <ul class="list-group">
-    </ul>
-</div>
-{{end}}

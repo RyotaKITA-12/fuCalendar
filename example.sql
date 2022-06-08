@@ -38,3 +38,4 @@ create table events (
   g_id   integer references groups(id),
   created_at timestamp not null
 );
+

@@ -3,9 +3,10 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 <div class="test">
     {{ range .Events }}
-    <a href="#" class="list-group-item list-group-item-action"> <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
-        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+    <a href="#" class="list-group-item list-group-item-action">
         　{{ .StartTimeStr }} ~ {{ .EndTimeStr }}
+        <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
+        <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
     </a>
     {{end}}
 </div>

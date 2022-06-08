@@ -100,6 +100,5 @@ func invitationSave(w http.ResponseWriter, r *http.Request) {
 func stringToTime(str string) time.Time {
     var layout = "2022-01-01 10:00:00"
     t, _ := time.Parse(layout, str)
-    t.Format("2022/01/01 15:00")
     return t
 }

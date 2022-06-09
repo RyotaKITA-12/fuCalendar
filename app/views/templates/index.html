@@ -3,17 +3,17 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 <div class="test">
     {{ range .Events }}
-    <a href="#" class="list-group-item list-group-item-action">
+    <li href="#" class="list-group-item list-group-item-action">
         <div class="container">
         <div class="row" style="width:550px">
-            <div class="col-8">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
+            <div class="col-9">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
             <div class="col-3">
                 <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
                 <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
             </div>
         </div>
     </div>
-    </a>
+    </li>
     {{end}}
 </div>
 {{end}}

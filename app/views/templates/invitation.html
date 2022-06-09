@@ -3,36 +3,36 @@
 <h1 class="text-primary"><b>暇な日を登録しよう。</b></h1>
 <form role="form" action="/invitation/save" method="post">
     <b><div class="form-group">
-      <p><h2 class="text-primary">日時</h2>
-         <input type="datetime-local"
-                name="start-time"
-                min="2022-01-01T00:00"
-                max="2099-12-31T23:59"
-                required>
-         <span class="text-muted">　〜　<span class="text-muted">
-         <input type="datetime-local"
-                name="end-time"
-                min="2022-01-01T00:00"
-                max="2099-12-31T23:59"
-                required></p>
-      <p><h2 class="text-primary">内容</h2>
-         <input class="form-control"
-                name="content"
-                id="content"
-                value="特になし"
-                size="30"></p>
-      <p><h2 class="text-primary">場所</h2>
-         <input class="form-control"
-                name="location"
-                id="location"
-                value="特になし"
-                size="30"></p>
-      <p><h2 class="text-primary">公開グループ</h2>
-         <input class="form-control"
-                name="group"
-                id="group"
-                value=""
-                size="30"></p></b>
+      <h1 class="text-primary" style="display: inline;">日時</h1>
+      <input type="datetime-local"
+             name="start-time"
+             min="2022-01-01T00:00"
+             max="2099-12-31T23:59"
+             required>
+      <span class="text-muted">　〜　<span class="text-muted">
+      <input type="datetime-local"
+             name="end-time"
+             min="2022-01-01T00:00"
+             max="2099-12-31T23:59"
+             required>
+      <h1 class="text-primary" style="display: inline;">内容</h1>
+      <input class="form-control"
+             name="content"
+             id="content"
+             value="特になし"
+             size="30">
+      <h1 class="text-primary" style="display: inline;">場所</h1>
+      <input class="form-control"
+             name="location"
+             id="location"
+             value="特になし"
+             size="30">
+      <h1 class="text-primary" style="display: inline;">公開グループ</h1>
+      <input class="form-control"
+             name="group"
+             id="group"
+             value=""
+             size="30"></b>
       <br>
       <button class="btn btn-lg btn-primary pull-right" type="submit">登録</button>
     </div>

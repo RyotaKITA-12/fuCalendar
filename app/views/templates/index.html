@@ -3,19 +3,21 @@
 <h1 class="text-primary"><b>あなたの暇な日。</b></h1>
 <div class="test">
     {{ range .Events }}
-    <li href="#" class="list-group-item list-group-item-action">
-        <div class="container">
-        <div class="row" style="width:550px">
-            <span style="font-family:monospace;">
-            <div class="col-9">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
-            <div class="col-3">
-                <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
-                <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
-            </span>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+            <div class="container">
+                <div class="row" style="width:550px">
+                    <span style="font-family:monospace;">
+                        <div class="col-8">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　</div>
+                        <div class="col-3">
+                            <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
+                            <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
+                        </div>
+                    </span>
+                </div>
             </div>
-        </div>
-    </div>
-    </li>
+        </li>
+    </ul>
     {{end}}
 </div>
 {{end}}

@@ -81,16 +81,16 @@ func groupSave(w http.ResponseWriter, r *http.Request) {
     }
 }
 
-func invitation(w http.ResponseWriter, r *http.Request) {
+func schedule(w http.ResponseWriter, r *http.Request) {
     _, err := session(w, r)
     if err != nil {
         http.Redirect(w, r, "/login", 302)
     } else {
-        generateHTML(w, nil, "layout", "private_navbar", "invitation")
+        generateHTML(w, nil, "layout", "private_navbar", "schedule")
     }
 }
 
-func invitationSave(w http.ResponseWriter, r *http.Request) {
+func scheduleSave(w http.ResponseWriter, r *http.Request) {
     sess, err := session(w, r)
     if err != nil {
         http.Redirect(w, r, "/login", 302)
@@ -111,7 +111,7 @@ func invitationSave(w http.ResponseWriter, r *http.Request) {
         if err := user.CreateEvent(content, location, start_time, end_time, group_id); err != nil {
             log.Println(err)
         }
-        http.Redirect(w, r, "/invitation", 302)
+        http.Redirect(w, r, "/schedule", 302)
     }
 }
 

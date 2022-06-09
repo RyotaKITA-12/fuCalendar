@@ -8,3 +8,9 @@
   border: gray 3px solid;
   border-radius:20px;
 }
+
+h1.input-fucalendar {
+  display: inline;
+  text-align: start;
+  padding-left: 15px;
+}

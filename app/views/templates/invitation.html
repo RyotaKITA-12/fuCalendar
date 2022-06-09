@@ -3,6 +3,7 @@
 <h1 class="text-primary"><b>Add Schedule</b></h1>
 <br>
 <form role="form" action="/invitation/save" method="post">
+    <div class="input-fucalendar">
       <div class="form-group">
       <input type="datetime-local"
              name="start-time"
@@ -19,7 +20,7 @@
       <br>
       <br>
       <div class="row">
-          <h1 class="text-primary col" style="display: inline; text-align: start;"><b>Description</b></h1>
+          <h1 class="text-primary col"><b>Description</b></h1>
           <input class="form-control col"
                  name="content"
                  id="content"
@@ -28,7 +29,7 @@
       </div>
       <br>
       <div class="row">
-      <h1 class="text-primary col" style="display: inline; text-align: startl; padding-left: 15px;"><b>Location</b></h1>
+      <h1 class="text-primary col"><b>Location</b></h1>
       <input class="form-control col"
              name="location"
              id="location"
@@ -37,7 +38,7 @@
       </div>
       <br>
       <div class="row">
-      <h1 class="text-primary col" style="display: inline; text-align: start;"><b>Group</b></h1>
+      <h1 class="text-primary col"><b>Group</b></h1>
       <input class="form-control col"
              name="group"
              id="group"
@@ -48,6 +49,7 @@
       <br>
       <br>
       <button class="btn btn-lg btn-primary pull-right" type="submit">Add</button>
+    </div>
     </div>
 </form>
 {{end}}

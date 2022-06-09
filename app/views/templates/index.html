@@ -4,11 +4,11 @@
 <div class="test">
     {{ range .Events }}
     <ul class="list-group">
-        <li class="list-group-item list-group-item-action">
+        <li class="list-group-item">
             <div class="container">
                 <div class="row" style="width:550px">
                     <span style="font-family:monospace;">
-                        <span class="col-9">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　　</span>
+                        <span class="col-9">{{ .StartTimeStr }} ~ {{ .EndTimeStr }}　　　　</span>
                         <span class="col-3">
                             <button class="btn btn-sm btn-secondary pull-right" type="submit">編集</button>
                             <button class="btn btn-sm btn-danger pull-right" type="submit">削除</button>
